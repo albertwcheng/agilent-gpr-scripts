@@ -24,7 +24,7 @@ setwd("normalized")
 
 # Write data
 plotDensities(RG.pq)
-data <- cbind(RG$genes, RG.pq$R, RG.pq$G)
+data <- cbind(RG$genes, log2(RG.pq$R), log2(RG.pq$G))
 write.table(data, file = "complete_data.dat", sep="\t")
 plotDensities(RG.pq)
 

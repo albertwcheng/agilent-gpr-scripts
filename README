@@ -5,3 +5,13 @@ normalized (created)
 
 goto agilent-gpr-scripts
 open R, source("normalizeAgilentGPRFormattedArrayData.R")
+
+processing
+background correct "minimum"
+within array "loess"
+across array "quantile"
+
+creates:
+log2 expression value 
+
+geneName Rvalues... (log2) Gvalues... (log2)
