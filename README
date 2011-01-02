@@ -1,0 +1,7 @@
+
+agilent-gpr-scripts
+raw (put your gpr files and gal file)
+normalized (created)
+
+goto agilent-gpr-scripts
+open R, source("normalizeAgilentGPRFormattedArrayData.R")
