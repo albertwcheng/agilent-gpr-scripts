@@ -7,7 +7,7 @@ goto agilent-gpr-scripts
 open R, source("normalizeAgilentGPRFormattedArrayData.R")
 
 processing
-background correct "minimum"
+background correct "none"
 within array "loess"
 across array "quantile"
 
