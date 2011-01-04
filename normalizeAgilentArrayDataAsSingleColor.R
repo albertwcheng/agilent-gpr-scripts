@@ -7,8 +7,8 @@ setwd("raw")
 # Read GRP and GAL files
 gprFiles = dir(pattern = "*.txt$")
 RG <- read.maimages(gprFiles, source="agilent")
-RG$genes <- readGAL()
-RG$printer <- getLayout(RG$genes)
+#RG$genes <- readGAL()
+#RG$printer <- getLayout(RG$genes)
 
 # Preprocess data
 RG.b <-backgroundCorrect(RG,method="minimum") #use TOBI method Bell Method: RG.b <-backgroundCorrect(RG,method="none",offset=0) #no background subtract.
