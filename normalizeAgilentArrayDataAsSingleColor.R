@@ -5,8 +5,8 @@ setwd("..")
 setwd("raw")
 
 # Read GRP and GAL files
-gprFiles = dir(pattern = "*.gpr$")
-RG <- read.maimages(gprFiles, source="genepix")
+gprFiles = dir(pattern = "*.txt$")
+RG <- read.maimages(gprFiles, source="agilent")
 RG$genes <- readGAL()
 RG$printer <- getLayout(RG$genes)
 
