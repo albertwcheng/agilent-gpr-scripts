@@ -42,10 +42,10 @@ for(i in (numInfoCols+numChnCols+1):(numInfoCols+numChnCols*2))
 	colnam[i]=paste(colnames(data)[i],".","G",sep="")	
 }
 colnames(data)=colnam
-write.table(data, file = "G.bgc0.norm.gn.txt", sep="\t",quote=FALSE)
+write.table(data, file = "G.bgc0.norm.gn.txt", sep="\t",quote=FALSE,row.names=FALSE)
 data.nolog <- cbind(RG$genes, RG.pq$R, RG.pq$G)
 colnames(data.nolog)=colnam
-write.table(data.nolog, file = "G.bgc0.norm.gn.nolog.txt", sep="\t",quote=FALSE)
+write.table(data.nolog, file = "G.bgc0.norm.gn.nolog.txt", sep="\t",quote=FALSE,row.names=FALSE)
 #plotDensities(RG.pq)
 
 setwd("..")
